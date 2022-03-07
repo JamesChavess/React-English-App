@@ -1,0 +1,39 @@
+body {
+  background-color: rgba(199, 199, 199, 0.829);
+}
+
+.skillContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+h6{
+  font-size: 10px;
+}
+h2 {
+ position: absolute;
+ left: 50px;
+ top: 32px;
+
+}
+
+input{
+  outline: none;
+}
+input[data-error="true"]{
+  border: 1px solid rgb(231, 65, 65);
+  padding-left: 30px;
+  color:  rgb(197, 76, 76);
+  background-image: url('../imgs/error.svg'); 
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: rgb(240, 232, 232);
+}
+section,article{
+  height: max-content;
+}

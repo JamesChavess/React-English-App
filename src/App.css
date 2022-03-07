@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  transition: ease-in-out 1s;
+  font-family: 'Rosarivo', serif;
+}
+.app{
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  background-image: url("./imgs/bgImg.svg?css");
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+}
+
+article img {
+  width: 80px;
+}
+
+h1 {
+  width: max-content;
+  font-size: 30px;
+  text-decoration: solid;
+}
+
+input.true {
+  border: 1px solid rgb(231, 65, 65);
+  padding-left: 30px;
+  color: rgb(197, 76, 76);
+  background-image: url('./imgs/error.svg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: rgb(240, 232, 232);
+}
+
+input.true>img {
+  padding-left: 30px;
+}
+
+section {
+  width: 100%;
+}
+
+section.chartsContainer {
+  background: url("./imgs/darkBg2.svg");
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+canvas{
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  width: 500px !important;
+}
+.dark{
+ 
+  border: 1px solid rgb(179, 179, 255);
+}
+.menu{
+  width: 50px;
+  height: auto;
+  position: absolute;
+ right: 0px;
+  top: 0px;
+  z-index: 4;
+}
+.menu:hover{
+cursor: pointer;
+}
+article.Beginner{
+border: 2px solid green;
+background-color: rgba(219, 243, 219, 0.904);
+}
+article.Intermediate{
+  border: 2px solid rgb(197, 218, 10);
+  background-color: rgba(240, 243, 213, 0.925);
+}
+article.HighLevel{
+  border: 2px solid rgb(255, 153, 0);
+  background-color: rgba(233, 222, 205, 0.911);
+}
+article.Advanced{
+  border: 2px solid rgb(255, 0, 0);
+  background-color: rgba(240, 212, 212, 0.877);
+}
