@@ -14,7 +14,6 @@ export default function ProsNCons({ participant }) {
             return score[0]
         }
     })
-    console.log(maxScoreName[0][0])
 
     Object.entries(participant.results[2021])
     const data = {

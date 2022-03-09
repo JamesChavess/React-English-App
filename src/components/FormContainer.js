@@ -3,14 +3,14 @@ import styles from './Form.module.css'
 
 
  
- export const FormContainer = (props,{inputValHandler}) => {
+ export const FormContainer = (props,{inputValHandler},darkMode) => {
 
-
-     console.log(props,inputValHandler)
     return (
-        <main>
+        
+        <main className={props.darkMode ? styles.dark : styles.light }>
             {/* <img src={img}></img> */}
             <form action="mailto:sb@gmail.com">
+          
                 <label  htmlFor="fName">Full Name</label>
                 <input name="fName" onChange={props.inputValHandler}></input>
                 <label htmlFor="pNumber">Phone Number</label>
@@ -30,6 +30,7 @@ import styles from './Form.module.css'
                 <br />
                 <button type="submit">Schedule Appointment</button>
             </form>
+            <footer></footer>
         </main>
     )
 }

@@ -19,7 +19,7 @@ import { Doughnut } from "react-chartjs-2"
         },
 */
 function DoughnutChart({ participant }) {
-    console.log(participant.Name)
+
     const results = participant.results['2021']
     const data = {
         labels: ["comprehension", "fluency", "Sentence Structure", "pronounciation", "monoliguisim"],

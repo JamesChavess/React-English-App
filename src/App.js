@@ -6,8 +6,13 @@ import FormContainer from "./components/FormContainer";
 import CustomProgressBar from './components/CustomProgressBar'
 import DoughnutChart from './components/Doughnut';
 import ProsNCons from './components/ProsNCons';
+import search from "./imgs/search.svg"
 import lightMenu from "./imgs/lightMenu.svg"
 import darkMenu from "./imgs/darkMenu.svg"
+import lightLogo from "./imgs/lightLogo.svg"
+import darkLogo from "./imgs/darkLogo.svg"
+import admin from "./imgs/admin.svg"
+import contact from "./imgs/darkLogo.svg"
 import Advanced from "./imgs/advanced.svg"
 import HighLevel from "./imgs/highlevel.svg"
 import Intermediate from "./imgs/intermediate.svg"
@@ -32,6 +37,7 @@ const imageStruct = {
 
 function App() {
   const [isActive, setActive] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
   const [participant, setParticipant] = useState();
   const [emailParticipant, setEmailParticipant] = useState("");
   const [invalid, setInvalid] = useState(false);
@@ -40,11 +46,10 @@ function App() {
 
   const handleSearchParticipant = () => {
     const participantFound = participantList.find((item) => item.Email.toLowerCase() === emailParticipant.toLowerCase())
-    console.log(participantFound)
+  
     if (participantFound) {
       setActive(false)
       setParticipant(participantFound);
-      console.log(participant)
     }
   }
 
@@ -62,13 +67,24 @@ function App() {
   }
 
   return (
-    <main className="app dark">
-      <img className='menu' srcSet={darkMenu}/>
-      {isActive && <FormContainer inputValHandler={inputValHandler} />}
-
-      <input name="searchEmail" value={emailParticipant} onChange={inputSearchHandler} placeholder='Type in your email' data-error={invalid} />
-      <button onClick={() => { handleSearchParticipant(); }}>Find results</button>
+    <main className="app">
       
+      <header>
+        <img alt="site logo"/>create title and logo 
+        <img onClick={()=> {document.getElementById("popUp").classList.toggle('hidden')}} className='menu' srcSet={darkMode ? darkMenu : lightMenu}/>
+          <ul id='popUp' className='hidden'>
+            <li ><img srcSet={admin}/>Admin</li>
+            <li onClick={()=> {setDarkMode(!darkMode)}}> <img srcSet={darkMode ? lightLogo : darkLogo}></img>{darkMode ? 'Light' : 'Dark'} Mode</li>
+            <li><img srcSet={admin}/>Contact Us</li>
+          </ul>
+        </header>
+
+      {isActive && <FormContainer darkMode={darkMode} inputValHandler={inputValHandler} />}
+    <fieldset>
+      <legend> Search Your Previous Assesment Results </legend>
+      <input name="searchEmail" value={emailParticipant} onChange={inputSearchHandler} placeholder='Type in your email' data-error={invalid} />
+      <button name="searchEmail" onClick={() => { handleSearchParticipant(); }}><img srcSet={search}/> </button>
+    </fieldset>
       {!isActive && <button onClick={() => { setActive(true) }} className='returnBtn'>Go Back</button>}
       
         {participant && <>
@@ -86,7 +102,7 @@ function App() {
             </h1>
           </article>
         </>},
-        {participant && console.log(participant.results['2020'] !== {})}
+        {/* {participant && console.log(participant.results['2020'] !== {})} */}
         <section className="chartsContainer dark" >
           <aside> {participant &&
             <div>

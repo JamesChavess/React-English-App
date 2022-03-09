@@ -1,113 +1,161 @@
 @font-face {
-    font-family: 'Rajdhani';
-    src: local('Rosarivo'), url('https://fonts.googleapis.com/css2?family=Rosarivo&display=swap') format('truetype');
+  font-family: "Rajdhani";
+  src: local("Rosarivo"),
+    url("https://fonts.googleapis.com/css2?family=Rosarivo&display=swap")
+      format("truetype");
 }
-
-main {
-    background-color: #CDE2F1;
-    background: url("../imgs/darkBg.svg");
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    width: 101%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+main.dark {
+  background: url("../imgs/darkBg.svg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 }
-
 form {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
-    font-weight: bold;
-    color: #ffffff;
+  /* width: 45%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  font-weight: bold;
+  color: #ffffff;
 }
 label {
-    font-size: 2.2vw;
+  font-size: 2.2vw;
 }
 
 aside {
-    display: flex;
+  display: flex;
 }
-form div{
-    padding: 0;
-    margin: 0;
-    text-align: center;
+form div {
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
-form div input{
-    width: 60%;
+form div input {
+  width: 60%;
 }
-
-.bg{
-    position: absolute;
-    background-size: cover;
-    z-index: -1;
-}
-
 input {
-    font-size: larger;
-    margin: 2px;
-    height: 50px;
-    width: 80%;
-    border-radius: 5px;
-    border: 3px solid #ffffff;
-    outline: none;
-    padding-left: 30px;
-    background-color: #ffffffb4;
+  font-size: larger;
+  margin: 2px;
+  height: 50px;
+  width: 80%;
+  border-radius: 5px;
+  border: 3px solid #ffffff;
+  outline: none;
+  padding-left: 30px;
+  background-color: #ffffffb4;
 }
 
-input:focus{
-    background:
-        linear-gradient(rgb(0, 0, 156), rgb(44, 4, 226)) center bottom 5px /calc(100% - 10px) 2px no-repeat;
-    background-color: white;
-    
+input:focus {
+  background: linear-gradient(rgb(0, 0, 156), rgb(44, 4, 226)) center bottom 5px /
+    calc(100% - 10px) 2px no-repeat;
+  background-color: white;
 }
-input[data-error=true]:focus {
-    background: unset;
-    background-color: white;
-    border: 0.5px solid rgb(197, 76, 76);;
+input[data-error="true"]:focus {
+  background: unset;
+  background-color: white;
+  border: 0.5px solid rgb(197, 76, 76);
 }
-input[type="password"]{
-    color: green;
-}
-img {
-    height: auto;
-    width: 45%;
-    margin: 3%;
+input[type="password"] {
+  color: #082564;
 }
 
 button {
-    width: 60%;
-    border-radius: 15px;
-    font-size: 20px;
-    border: 0.5 rgba(255, 255, 255, 0.801);
-    height: 50px;
-    color: white;
-    background-color: #103B9B;
-    border: 2px solid white;
+  width: 60%;
+  border-radius: 15px;
+  font-size: 20px;
+  border: 0.5 rgba(255, 255, 255, 0.801);
+  height: 50px;
+  color: white;
+  background-color: #082564;
+  border: 2px solid white;
 }
-input[name="searchEmail"]{
-    margin: 3%;
-    width: 70%
+input[name="searchEmail"] {
+    
+  margin: 3%;
+  width: 70%;
+}
+/* light view */
+
+main.light {
+  background: url("../imgs/lightBg.svg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  width: 101%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+main.light form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  font-weight: bold;
+  color: #04083f;
 }
 
+main.light input {
+  font-size: larger;
+  margin: 2px;
+  height: 50px;
+  width: 80%;
+  border-radius: 5px;
+  border: 3px solid #082564;
+  outline: none;
+  padding-left: 30px;
+  background-color: #ffffff94;
+}
+
+input:focus {
+  background: linear-gradient(rgb(0, 0, 156), rgb(44, 4, 226)) center bottom 5px /
+    calc(100% - 10px) 2px no-repeat;
+  background-color: white;
+}
+input[data-error="true"]:focus {
+  background: unset;
+  background-color: white;
+  border: 0.5px solid rgb(197, 76, 76);
+}
+input[type="password"] {
+  color: green;
+}
+
+main.light button {
+  width: 60%;
+  border-radius: 15px;
+  font-size: 20px;
+  border: 0.5 rgba(255, 255, 255, 0.801);
+  height: 50px;
+  color: #082564;
+  font-weight: bold;
+  background-color: white;
+  border: 2px solid #082564;
+}
 @media (max-width: 600px) {
-    main {
-        flex-direction:row;
-        justify-content: center;
-        align-items: center;
-        min-width: 375px;
-    }
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 375px;
+  }
 
-    img {
-        height: auto;
-        width: 65%;
-    }
+  img {
+    height: auto;
+    width: 65%;
+  }
 
-    form {
-        width: 75%;
-    }
+  form {
+    width: 75%;
+  }
 }

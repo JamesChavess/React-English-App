@@ -2,15 +2,19 @@
 *{
   margin: 0;
   padding: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.3s;
   font-family: 'Rosarivo', serif;
 }
+html{
+  min-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
 .app{
-  width: 100vw;
-  height: max-content;
+  min-width: 101%;
   display: flex;
   flex-direction: column;
-  background-image: url("./imgs/bgImg.svg?css");
+
 }
 
 button {
@@ -47,16 +51,12 @@ input.true {
   background-color: rgb(240, 232, 232);
 }
 
-input.true>img {
-  padding-left: 30px;
-}
-
 section {
   width: 100%;
 }
 
 section.chartsContainer {
-  background: url("./imgs/darkBg2.svg");
+  background: url("./imgs/lightBg2.svg");
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -82,11 +82,11 @@ canvas{
   border: 1px solid rgb(179, 179, 255);
 }
 .menu{
-  width: 50px;
+  width: 40px;
   height: auto;
   position: absolute;
- right: 0px;
-  top: 0px;
+  right: 0px;
+  top: 7px;
   z-index: 4;
 }
 .menu:hover{
@@ -107,4 +107,65 @@ article.HighLevel{
 article.Advanced{
   border: 2px solid rgb(255, 0, 0);
   background-color: rgba(240, 212, 212, 0.877);
+}
+header{
+  background-color: white;
+  width: 100%;
+  height: 75px;
+  text-align: center;
+}
+header img{
+  margin: 1%;
+}
+header ul{
+  width: 130px;
+  background-color: white;
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  top: 11%;
+  padding: 1%;
+  list-style: none;
+  border-radius: 10px 10px 0px 10px;
+}
+header ul li {
+  width: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #082564;
+  font-size: 20px;
+  
+}
+header ul li:hover{
+  cursor: pointer;
+  color: #04163b;
+  font-weight: bold;
+}
+header ul li img{
+  height:auto;
+  width: 5%;
+}
+fieldset{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #082564;
+}
+input[name='searchEmail']{
+  border: 2px solid #082564;
+  color: #082564;
+  position: relative;
+  width: 50%;
+}
+button[name='searchEmail']{
+  position: relative;
+  width: 120px;
+  height: 54px;
+  top: 5px;
+}
+button[name='searchEmail'] img{
+  text-align: center;
+  width: 40%;
 }
