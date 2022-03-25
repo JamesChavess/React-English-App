@@ -21,19 +21,6 @@ button {
   margin-bottom: 10px;
 }
 
-article {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  border-radius: 15px;
-  width: 90%;
-  height: auto;
-}
-
-article img {
-  width: 80px;
-}
 
 h1 {
   width: max-content;
@@ -66,7 +53,6 @@ section.chartsContainer {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .hidden {
   display: none;
 }
@@ -92,6 +78,19 @@ canvas{
 .menu:hover{
 cursor: pointer;
 }
+article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  height: auto;
+}
+
+article img {
+  width: 80px;
+}
+
 article.Beginner{
 border: 2px solid green;
 background-color: rgba(219, 243, 219, 0.904);
@@ -146,13 +145,6 @@ header ul li img{
   height:auto;
   width: 5%;
 }
-fieldset{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: 2px solid #082564;
-}
 input[name='searchEmail']{
   border: 2px solid #082564;
   color: #082564;
@@ -163,9 +155,68 @@ button[name='searchEmail']{
   position: relative;
   width: 120px;
   height: 54px;
-  top: 5px;
+  top: 15px;
 }
 button[name='searchEmail'] img{
   text-align: center;
   width: 40%;
+}
+button.returnBtn{
+  position: absolute;
+  width: 12%;
+  margin: 5px;
+}
+h3{
+  padding: 3%;
+  text-align: center;
+  width: 100%;
+  background-color: #04163b;
+  color: white;
+  font-size: 1.8vw;
+}
+fieldset{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #082564;
+}
+
+@media (width < 570px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 375px;
+  } 
+  header{
+    height: 30px;
+  }
+  header img.menu{
+    width: 30px;
+    right: 10px;
+  }
+  header ul#popUp{ 
+  } 
+  header ul#popUp li{
+    height: 20px;
+    width: 30%;
+    background-color: white;
+  } 
+  h6{
+    display: none;
+  }
+  /* header ul#popUp{
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #040b1bb7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul#popUp li{
+    
+  } */
 }

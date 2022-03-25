@@ -19,11 +19,11 @@ import styles from './Form.module.css'
                 <input name="email" onChange={props.inputValHandler}></input>
                 <aside >
                     <div>
-                        <label htmlFor="pCode">Promo Code</label>
+                        <label htmlFor="pCode">Promo Code</label><br/>
                         <input type="password" name="pCode" onChange={inputValHandler}></input>
                     </div>
                     <div>
-                        <label htmlFor="timeDate">Time and Date</label>
+                        <label htmlFor="timeDate">Time and Date</label><br/>
                         <input  name='timeDate' type='date' id="timeDate" onChange={inputValHandler}></input>
                     </div>
                 </aside>
