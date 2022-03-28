@@ -5,10 +5,16 @@ import FormContainer from "./components/FormContainer";
 import ProfileBanner from './components/ProfileBanner';
 import SearchWindow from './components/SearchWindow';
 import ChartsContainer from './components/ChartsContainer';
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { gapi } from 'gapi-script';
 
 const clientId = "901135002966-atqilg0legnfg9eer5lj9iknooouqo0l.apps.googleusercontent.com";
+=======
+import { useState } from 'react'
+
+;
+>>>>>>> 4862795b9e5269400412d50ecdb9ca013a8d62d4
 
 function App() {
 
@@ -63,7 +69,11 @@ function App() {
   }
   return (
     <main className="app">
+<<<<<<< HEAD
       {/* {accessToken && <h5>Google access token {accessToken}</h5>} */}
+=======
+
+>>>>>>> 4862795b9e5269400412d50ecdb9ca013a8d62d4
       <Header darkMode={darkMode} themeToggle={themeToggle}/>
       {isActive && <FormContainer darkMode={darkMode} inputValHandler={inputValHandler} />}
       <SearchWindow className={isActive ? 'hidden' : ''} name={participant && participant.Name } emailParticipant={emailParticipant} invalid={invalid} inputSearchHandler={inputSearchHandler} handleSearchParticipant={handleSearchParticipant}/>
