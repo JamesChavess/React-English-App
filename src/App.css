@@ -196,24 +196,14 @@ fieldset{
     align-items: center;
     min-width: 375px;
   } 
-<<<<<<< HEAD
   /* header{
     height: max-content;
-=======
-  header{
-    height: 30px;
->>>>>>> 4862795b9e5269400412d50ecdb9ca013a8d62d4
   }
   header img.menu{
     width: 30px;
     right: 10px;
   }
-<<<<<<< HEAD
   
-=======
-  header ul#popUp{ 
-  } 
->>>>>>> 4862795b9e5269400412d50ecdb9ca013a8d62d4
   header ul#popUp li{
     height: 20px;
     width: 30%;
@@ -221,11 +211,7 @@ fieldset{
   } 
   h6{
     display: none;
-<<<<<<< HEAD
   } */
-=======
-  }
->>>>>>> 4862795b9e5269400412d50ecdb9ca013a8d62d4
   /* header ul#popUp{
     z-index: -1;
     height: 100vh;

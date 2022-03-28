@@ -12,11 +12,7 @@ export default function ProfileBanner({participant}){
       }
       
    return (<>{participant && <>
-<<<<<<< HEAD
     <article id="profileBanner" className={`${participant.level}`}>
-=======
-    <article className={`${participant.level}`}>
->>>>>>> 4862795b9e5269400412d50ecdb9ca013a8d62d4
       <img srcSet={imageStruct[participant.level]}  alt="level image" />
       <h1>
         {'Name : ' + participant.Name}
