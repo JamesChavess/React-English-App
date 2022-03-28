@@ -21,19 +21,6 @@ button {
   margin-bottom: 10px;
 }
 
-article {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  border-radius: 15px;
-  width: 90%;
-  height: auto;
-}
-
-article img {
-  width: 80px;
-}
 
 h1 {
   width: max-content;
@@ -66,7 +53,6 @@ section.chartsContainer {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .hidden {
   display: none;
 }
@@ -92,27 +78,49 @@ canvas{
 .menu:hover{
 cursor: pointer;
 }
+article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  height: auto;
+}
+
+article img {
+  width: 80px;
+}
+
 article.Beginner{
 border: 2px solid green;
-background-color: rgba(219, 243, 219, 0.904);
+background-image: linear-gradient(to right, #46e040 , #00e600);
+
 }
 article.Intermediate{
   border: 2px solid rgb(197, 218, 10);
-  background-color: rgba(240, 243, 213, 0.925);
+  background-image: linear-gradient(to right, #a6ff17 , #e2de07);
+
 }
 article.HighLevel{
   border: 2px solid rgb(255, 153, 0);
-  background-color: rgba(233, 222, 205, 0.911);
+  background-image: linear-gradient(to right, #f6e604 , #ffae00);
 }
 article.Advanced{
   border: 2px solid rgb(255, 0, 0);
-  background-color: rgba(240, 212, 212, 0.877);
+  background-image: linear-gradient(to right, #96a010 , #e60a0a);
 }
+
+/* article#profileBanner{
+  background-image: linear-gradient(to right, #5110A0 , #344AC4);
+} */
 header{
   background-color: white;
   width: 100%;
-  height: 75px;
+  height: 100px;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 header img{
   margin: 1%;
@@ -129,13 +137,11 @@ header ul{
   border-radius: 10px 10px 0px 10px;
 }
 header ul li {
+  font-size: 20px;
   width: max-content;
   display: flex;
-  justify-content: left;
   align-items: center;
-  color: #082564;
-  font-size: 20px;
-  
+  color: #082564;  
 }
 header ul li:hover{
   cursor: pointer;
@@ -145,13 +151,6 @@ header ul li:hover{
 header ul li img{
   height:auto;
   width: 5%;
-}
-fieldset{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: 2px solid #082564;
 }
 input[name='searchEmail']{
   border: 2px solid #082564;
@@ -163,9 +162,67 @@ button[name='searchEmail']{
   position: relative;
   width: 120px;
   height: 54px;
-  top: 5px;
+  top: 15px;
 }
 button[name='searchEmail'] img{
   text-align: center;
   width: 40%;
+}
+button.returnBtn{
+  position: absolute;
+  width: 12%;
+  margin: 5px;
+}
+h3{
+  padding: 3%;
+  text-align: center;
+  width: 100%;
+  background-color: #04163b;
+  color: white;
+  font-size: 1.8vw;
+}
+fieldset{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #082564;
+}
+
+@media (width < 570px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 375px;
+  } 
+  /* header{
+    height: max-content;
+  }
+  header img.menu{
+    width: 30px;
+    right: 10px;
+  }
+  
+  header ul#popUp li{
+    height: 20px;
+    width: 30%;
+    background-color: white;
+  } 
+  h6{
+    display: none;
+  } */
+  /* header ul#popUp{
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #040b1bb7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header ul#popUp li{
+    
+  } */
 }
