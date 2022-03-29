@@ -47,14 +47,12 @@ function App() {
   }
   return (
     <main className="app">
-
       <Header darkMode={darkMode} themeToggle={themeToggle}/>
       {isActive && <FormContainer darkMode={darkMode} inputValHandler={inputValHandler} />}
       <SearchWindow className={isActive ? 'hidden' : ''} name={participant && participant.Name } emailParticipant={emailParticipant} invalid={invalid} inputSearchHandler={inputSearchHandler} handleSearchParticipant={handleSearchParticipant}/>
       {!isActive && <button onClick={() => { setActive(true) }} className='returnBtn'>Open Form</button>}
       {participant && <ProfileBanner participant={participant} />}
       { participant && <ChartsContainer participant={participant}/>}
-     
     </main>
   );
 }
