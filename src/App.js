@@ -5,11 +5,27 @@ import FormContainer from "./components/FormContainer";
 import ProfileBanner from './components/ProfileBanner';
 import SearchWindow from './components/SearchWindow';
 import ChartsContainer from './components/ChartsContainer';
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
+import { gapi } from 'gapi-script';
 
-;
+const clientId = "901135002966-atqilg0legnfg9eer5lj9iknooouqo0l.apps.googleusercontent.com";
 
 function App() {
+
+  useEffect(()=>{
+    function start(){
+      gapi.client.init({
+        clientId: clientId,
+        scope: ""
+      })
+    };
+
+    gapi.load('client:auth2', start)
+  })
+  //get google access token 
+// const accessToken = gapi.auth.getToken().access_token;
+  
+
   const [isActive, setActive] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
   const [participant, setParticipant] = useState();
@@ -47,6 +63,11 @@ function App() {
   }
   return (
     <main className="app">
+
+      {/* {accessToken && <h5>Google access token {accessToken}</h5>} */}
+
+
+
       <Header darkMode={darkMode} themeToggle={themeToggle}/>
       {isActive && <FormContainer darkMode={darkMode} inputValHandler={inputValHandler} />}
       <SearchWindow className={isActive ? 'hidden' : ''} name={participant && participant.Name } emailParticipant={emailParticipant} invalid={invalid} inputSearchHandler={inputSearchHandler} handleSearchParticipant={handleSearchParticipant}/>

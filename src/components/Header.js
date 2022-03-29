@@ -4,12 +4,17 @@ import lightLogo from "../imgs/lightLogo.svg"
 import darkLogo from "../imgs/darkLogo.svg"
 import admin from "../imgs/admin.svg"
 import contact from "../imgs/contact.svg"
-
+import Login from './Login';
+import Logout from './Logout';
 
 export default function Header(props){
+
+  
+  
     return(<>
     <header>
-        <img alt="site logo"/>create title and logo 
+        <Login/>
+        <img src="" alt="site logo"/>create title and logo 
         <article>
         <img onClick={()=> {document.getElementById("popUp").classList.toggle('hidden')}} className='menu' srcSet={props.darkMode ? darkMenu : lightMenu}/>
           <ul id='popUp' className='hidden'>
@@ -18,6 +23,7 @@ export default function Header(props){
             <li><img srcSet={contact}/><h6>Contact Us</h6></li>
           </ul>
           </article>
+          <Logout/>
         </header> 
     </>)
 }
